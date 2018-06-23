@@ -1,0 +1,77 @@
+" Set 'nocompatible' to ward off unexpected things
+set nocompatible
+
+set cursorline
+
+" Enable syntax highlighting
+syntax on
+
+" Show partial commands in the last line of the screen
+set showcmd
+
+" Highlight searches
+set hlsearch
+
+" Display the cursor position on the last line of the screen
+" or in the status line of a window
+set ruler
+
+"STATUSLINE-------------------------------------------------------------------
+
+" Always display the status line, even if only one window is displayed
+set laststatus=2
+" set statusline=%F%m\ %P
+
+" Use visual bell when doing something wrong
+set visualbell
+
+" And reset the terminal code for the visual bell. If visualbell
+" is set and this line is also included, vim will neither flash 
+" nor beep. If visualbell is unset, this does nothing.
+set t_vb=
+
+" Enable use of the mouse for all modes
+set mouse=a
+
+" Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
+set cmdheight=2
+
+" Display line numbers on the left
+set number
+
+" Better command-line completion
+set wildmenu
+
+"INDENTAION OPTIONS-----------------------------------------------------------
+"
+" Indentation settings for using 4 spaces insetead of tabs.
+" Do not change 'tabstop' from its default value of 8 with this setup
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Keep the same indent as the line you are currently on
+" if no filetykpe-specific indenting is enabled.
+set autoindent
+
+" Enable loading the plugin files for specific file types
+filetype plugin on
+
+" Attempt to determine the type of a file based on its name and possibly
+" its contents. Use this to allow auto-indenting for each filetype,
+" and for plugins that are filetype specific,
+filetype indent plugin on 
+
+" TAGGING---------------------------------------------------------------------
+set path+=**
+set tags=./tags;
+"set tags=./GTAGS;
+
+" set csprg=gtags-cscope
+" cscope add GTAGS
+
+" BACKSPACE-------------------------------------------------------------------
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
+
